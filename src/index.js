@@ -1,5 +1,5 @@
 let nIntervId;
-console.log("hello");
+
 function changeColor() {
   if (!nIntervId) {
     nIntervId = setInterval(flashText, 1000);
@@ -10,7 +10,7 @@ function changeColor() {
 function flashText() {
   const toggle = document.getElementById("my_box");
 
-  toggle.className === "go" ? "stop" : "go";
+  toggle.className = toggle.className === "go" ? "stop" : "go";
 }
 
 function stopTextColor() {
